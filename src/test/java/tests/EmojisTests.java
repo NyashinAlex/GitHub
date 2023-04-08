@@ -25,4 +25,15 @@ public class EmojisTests {
                     .body("100", equalTo("https://github.githubassets.com/images/icons/emoji/unicode/1f4af.png?v8"));
         });
     }
+    @Test
+    @DisplayName("Get List Commits")
+    void getListCommits() {
+        step("Get List Commits", () -> {
+            given()
+                    .spec(requestGetSpec)
+                    .get("/repos/NyashinAlex/GitHub/commits")
+                    .then()
+                    .spec(responseSpec);
+        });
+    }
 }

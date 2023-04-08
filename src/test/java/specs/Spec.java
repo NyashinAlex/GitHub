@@ -13,7 +13,7 @@ public class Spec {
 
     public static RequestSpecification requestGetSpec = with()
             .filter(new AllureRestAssured())
-            .header("Authorization", "Bearer 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")
+            .header("Authorization", "Bearer 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")
             .baseUri("https://api.github.com")
             .log().all();
 
